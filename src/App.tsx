@@ -22,22 +22,18 @@ import WormholeConnect, {
           LINGO_NTT:[
             {
               chain: 'BaseSepolia',
-              mode: "locking",
               paused: false,
               manager: '0x7A907B5fA758004a8e9582285298aeE291A4363d',
               token: '0x1b0981608F8D5Fb22fa38Bd445a877938cBf90FA',
               transceiver: [
                 {
                   address: '0x36D804A36ddb96fA81945100e1dB3Fbc26c1c037',
-                  pauser: "0x3DfbeebF060CE33A93Ba06FDf9F4997330C444C3",
                   type: 'wormhole',
                 },
               ],
-              pauser: "0x3DfbeebF060CE33A93Ba06FDf9F4997330C444C3"
             },
             {
               chain: 'Solana',
-              mode: "burning",
               paused: false,
               manager: 'NTtE1h8KkULNQwiqvkA3pPmtEnLvvSd2tcFYq8MaNSS',
               token: 'mntatMdn5EVdqqhuR7cR22SDbY78Z324j5hXmphjaf6',
