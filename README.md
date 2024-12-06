@@ -1,52 +1,99 @@
-# Wormhole NTT Connect demo
 
-This project sets up a Vite-React TypeScript application and integrates it with the Wormhole Connect SDK.
+# WormholeConnect NTT Integration
 
-## Prerequisites
+This project demonstrates the integration of **WormholeConnect** for Non-Transferable Tokens (NTTs) between the **Solana** and **BaseSepolia** chains. The application simplifies token management and routing for the `LINGOsol` and `LINGObase` tokens.
 
-Ensure you have the following installed on your system:
+## Features
 
-- **Node.js** & **TypeScript**
-- **npm** or **yarn**
+- **Multi-Chain Support**:
+    - Enables token bridging between **Solana** and **BaseSepolia**.
 
-## Setup
+- **Token Configurations**:
+    - Supports `LINGOsol` (on Solana) and `LINGObase` (on BaseSepolia).
 
-### 1. Clone the Repository
+- **User-Friendly Interface**:
+    - Simplified UI for NTT bridging with custom theming.
 
-First, clone the repository to your local machine:
+## Configuration
 
-```bash
-git clone https://github.com/wormhole-foundation/demo-ntt-connect.git
-cd demo-ntt-connect
-```
+### WormholeConnect Configuration
 
-### 2. Download Dependencies
+The `wormholeConfig` object defines:
 
-Make sure to install all required dependencies using `npm` or `yarn`:
+- **Network**: Set to `Testnet` for testing purposes.
+- **Chains**: Focuses on Solana and BaseSepolia.
+- **Tokens**: Supports bridging for the following tokens:
+    - `LINGOsol`: Solana-based NTT with a 9-decimal precision.
+    - `LINGObase`: BaseSepolia-based NTT with a 9-decimal precision.
+- **Routing**:
+    - Predefined routes for seamless token bridging using Wormhole's infrastructure.
 
-```bash
-# Using npm
-npm install
+### UI
 
-# Or using yarn
-yarn
-```
-```
+The user interface includes:
 
-### 3. Adjust WormholeConnectConfig
+- **Customizable Title**: Set to "Wormhole NTT UI."
+- **Default Inputs**: Preselects `Solana` as the source chain and `BaseSepolia` as the destination chain.
+- **Dark Theme**: With a custom primary color.
 
-Adjust the `WormholeConnectConfig` in `App.tsx` based on the `deployment.json` file from your NTT deployment. This configuration is essential to ensure proper integration with your deployment environment.
+## Installation
 
-### 4. Run the App
+### Prerequisites
 
-Finally, run your application:
+- Node.js (v14 or higher)
+- npm or yarn
+- A Solana keypair and BaseSepolia private key for testing
 
-```bash
-yarn dev
-```
+### Steps
 
-or, if using npm:
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-```bash
-npm run dev
-```
+## Usage
+
+- Select a source and destination chain.
+- Enter token details for `LINGOsol` or `LINGObase`.
+- Initiate the bridging process via the WormholeConnect interface.
+
+## Token Details
+
+| Token      | Chain       | Address                                   | Decimals |
+|------------|-------------|-------------------------------------------|----------|
+| `LINGOsol` | Solana      | `mntatMdn5EVdqqhuR7cR22SDbY78Z324j5hXmphjaf6` | 9        |
+| `LINGObase`| BaseSepolia | `0x1b0981608F8D5Fb22fa38Bd445a877938cBf90FA`  | 9        |
+
+## Technologies Used
+
+- **React**: For building the user interface.
+- **WormholeConnect**: For multi-chain token bridging.
+- **Solana** and **BaseSepolia**: Blockchain platforms for NTT management.
+
+## Development
+
+### Local Testing
+
+To test locally, ensure you have set up the required environment variables for Solana and BaseSepolia:
+
+1. Export your Solana private key:
+   ```bash
+   export SOLANA_PRIVATE_KEY="<your-private-key>"
+   ```
+2. Run the application using the test network:
+   ```bash
+   npm start
+   ```
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
