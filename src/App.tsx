@@ -101,7 +101,7 @@ import WormholeConnect, {
     LINGOsol: {
       key: 'LINGOsol',
       symbol: 'LINGO',
-      nativeChain: 'BaseSepolia',
+      nativeChain: 'Solana',
       displayName: 'LINGO',
       tokenId: {
         chain: 'Solana',
@@ -154,6 +154,8 @@ import WormholeConnect, {
   }
   
   function App() {
+    console.log('Wormhole Config:', wormholeConfig);
+
     const theme: WormholeConnectTheme = {
       mode: 'dark',
       primary: '#78c4b6',
