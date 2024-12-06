@@ -7,7 +7,7 @@ import WormholeConnect, {
   const wormholeConfig: WormholeConnectConfig = {
     network: 'Testnet',
     chains: ['Sepolia', 'Solana', 'BaseSepolia'],
-    tokens: ['WSVsep', 'WSVsol', 'WSVbase', 'LINGObase','LINGOsol'],
+    tokens: ['WSVsep', 'WSVsol', 'WSVbase', 'LINGO','LINGOsol'],
     ui: {
       title: 'Lingo & Wormhole NTT UI',
       defaultInputs: {
@@ -19,7 +19,7 @@ import WormholeConnect, {
     routes: [
       ...nttRoutes({
         tokens: {
-          LINGO_NTT:[
+          LINGO:[
             {
               chain: 'BaseSepolia',
               paused: false,
@@ -84,8 +84,8 @@ import WormholeConnect, {
       }),
     ],
     tokensConfig: {
-    LINGObase: {
-      key: 'LINGObase',
+    LINGO: {
+      key: 'LINGO',
       symbol: 'LINGO',
       nativeChain: 'BaseSepolia',
       displayName: 'LINGO',
@@ -100,7 +100,7 @@ import WormholeConnect, {
     ,
     LINGOsol: {
       key: 'LINGOsol',
-      symbol: 'LINGO',
+      symbol: 'LINGO_SOL',
       nativeChain: 'Solana',
       displayName: 'LINGO',
       tokenId: {
