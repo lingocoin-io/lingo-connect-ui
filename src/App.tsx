@@ -71,7 +71,7 @@ const wormholeConfig: WormholeConnectConfig = {
       },
       coinGeckoId: 'wormhole',
       icon: 'https://bafybeif2lgpznfykwic572sbykexp6aazzb52awzyuehap2wclobmst46e.ipfs.w3s.link/lingo_token.png',
-      decimals: 9
+      decimals: 18
     }
   }
 }
