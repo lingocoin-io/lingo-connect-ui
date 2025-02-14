@@ -11,12 +11,12 @@ const wormholeConfig: WormholeConnectConfig = {
   ui: {
     title: 'Lingo NTT UI',
     defaultInputs: {
-      fromChain: 'Solana',
-      toChain: 'Base'
+      fromChain: 'Base',
+      toChain: 'Solana'
     },
   },
   rpcs: {
-    Solana: 'https://api.mainnet-beta.solana.com'
+    Solana: 'https://mainnet.helius-rpc.com/?api-key=bdf61e2d-ac61-4f7d-8441-3b617ee44f22'
   },
   routes: [
     ...nttRoutes({
@@ -66,6 +66,30 @@ const wormholeConfig: WormholeConnectConfig = {
       },
       icon: 'https://bafybeif2lgpznfykwic572sbykexp6aazzb52awzyuehap2wclobmst46e.ipfs.w3s.link/lingo_token.png',
       decimals: 18
+    }
+  },
+  transactionSettings: {
+    Solana: {
+      priorityFee: {
+        // Number between 0-1, defaults to 0.9. Higher percentile yields higher fees.
+        // For example, you can set percentile to 0.95 to make Connect compute the
+        // 95th percentile priority fee amount based on recent transactions
+        percentile: 0.95,
+
+        // Any number, defaults to 1.0. The fee amount is multiplied by this number.
+        // This can be used to further raise or lower the fees Connect is using.
+        // For example, percentile=0.95 and percentileMultiple=1.1 would use
+        // the 95th percentile fee, with a 10% increase
+        percentileMultiple: 1.1,
+
+        // Minimum fee you want to use in microlamports, regardless of recent transactions
+        // Defaults to 1
+        min: 200_000,
+
+        // Maximum fee you want to use in microlamports, regardless of recent transactions
+        // Defaults to 100,000,000
+        max: 5_000_000,
+      }
     }
   }
 }
