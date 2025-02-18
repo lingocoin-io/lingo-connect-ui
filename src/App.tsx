@@ -9,7 +9,7 @@ const wormholeConfig: WormholeConnectConfig = {
   chains: ['Solana', 'Base'],
   tokens: ['LINGOsol', 'LINGObase'],
   ui: {
-    title: 'Lingo NTT UI',
+    title: 'Lingo WormHole Bridge ',
     defaultInputs: {
       fromChain: 'Base',
       toChain: 'Solana'
