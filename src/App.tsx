@@ -16,7 +16,7 @@ const wormholeConfig: WormholeConnectConfig = {
     },
   },
   rpcs: {
-    Solana: 'https://mainnet.helius-rpc.com/?api-key=bdf61e2d-ac61-4f7d-8441-3b617ee44f22'
+    Solana: 'https://dalia-3uo0e8-fast-mainnet.helius-rpc.com'
   },
   routes: [
     ...nttRoutes({
